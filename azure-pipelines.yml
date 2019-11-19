@@ -23,4 +23,4 @@ steps:
     goals: 'package'
 - task: sampletask@0
   inputs:
-    samplestring: 'World'
+    samplestring: 'Test'
