@@ -11,17 +11,14 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: Maven@3
+
+- task: sampletask2@0
   inputs:
-    mavenPomFile: 'pom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
-- task: sampletask@0
+    samplestring: 'Human'
+    samplestring2: 'Test File'
+    Filepath: '$(Build.ArtifactStagingDirectory)/Test.txt'
+- task: PublishBuildArtifacts@1
   inputs:
-    samplestring: 'Human 1'
-    samplestring2: 'Human 2'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'Test Drop'
+    publishLocation: 'Container'
