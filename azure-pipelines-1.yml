@@ -21,3 +21,8 @@ steps:
   inputs:
     samplestring: 'Test'
     Filepath: '$(Build.ArtifactStagingDirectory)/Test.ini'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'Test drop'
+    publishLocation: 'Container'
