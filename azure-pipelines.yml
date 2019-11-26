@@ -21,8 +21,7 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-
 - task: sampletask@0
   inputs:
-    samplestring: 'Human1'
-    samplestring2: 'Human2'
+    samplestring: 'Human 1'
+    samplestring2: 'Human 2'
