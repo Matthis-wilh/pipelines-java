@@ -19,7 +19,7 @@ steps:
   displayName: 'Run a multi-line script'
 - task: sampletask2@0
   inputs:
-    samplestring: 'Test2'
+    samplestring: 'Test3'
     Filepath: '$(Build.ArtifactStagingDirectory)'
     PathFileName: 'CanFlashACU_CH_PS10.hex'
     VariantMask: '2'
