@@ -19,8 +19,10 @@ steps:
   displayName: 'Run a multi-line script'
 - task: sampletask2@0
   inputs:
-    samplestring: 'Test'
-    Filepath: '$(Build.ArtifactStagingDirectory)/Test.ini'
+    samplestring: 'Test2'
+    Filepath: '$(Build.ArtifactStagingDirectory)'
+    PathFileName: 'CanFlashACU_CH_PS10.hex'
+    VariantMask: '2'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
