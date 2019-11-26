@@ -11,7 +11,10 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-
+- task: sampletask2@0
+  inputs:
+    samplestring: 'World'
+    Filepath: '$(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
   inputs:
