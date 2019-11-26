@@ -12,58 +12,7 @@ pool:
 
 steps:
 
-- task: sampletask2@0
-  inputs:
-    samplestring: 'Human'
-    samplestring2: '[Info]
-Version = "Software Release Tool - V0.98D (12/11/2019) - PreSeries"
 
-[WindowPos]
-InfoLeft = 83
-InfoShow = 1
-InfoTop = 144
-MainLeft = 706
-MainTop = 207
-
-[WindowSize]
-InfoHeight = 768
-InfoWidth = 569
-
-[ApplBase]
-CheckConsistency = True
-ElfFileName = ".out"
-PathFileName = "G:\Checksum Tool\PS10\CanFlashACU_CH_PS10.hex"
-Variant1 = "Lexion C8x Pack 22"
-Variant2 = "Trion L5x"
-VariantMask = 2
-
-[Output]
-BasePathName = ".\Output"
-CopyAndRename = True
-CreateReport = True
-ReleaseZIP = False
-VariantSetup = 4
-PackingBatchFile = ""
-Compress = True
-WithElfFile = True
-CompressMaxBlockFact = 16
-MarkCompressed = True
-
-[Debug]
-AddInfos = 0
-TextEditorFile = ""
-
-[Flash]
-UseUniFlash = False
-UniFlashBatchFile = ""
-CanFlashBatchFile = ""
-
-[Automatic]
-Analyse = True
-Build = False
-Flash = False
-'
-    Filepath: '$(Build.ArtifactStagingDirectory)/Test.ini'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
